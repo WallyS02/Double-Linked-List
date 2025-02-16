@@ -15,12 +15,10 @@ int convert(char character) {
 
 class List {
     struct block {
-        //unsigned long long int* key;
         unsigned long long int key;
         block* nextElement, * previousElement;
     };
     block* beg, * end, * iterators[MAX_ITERATOR_NUMBER], * element, * temp;
-    //int byteSize;
 
 public:
 
@@ -29,13 +27,6 @@ public:
         for (int i = 0; i < MAX_ITERATOR_NUMBER; i++)
             iterators[i] = NULL;
     }
-
-    /*List(int byteSize) {
-        //this->byteSize = byteSize;
-        element = beg = end = NULL;
-        for (int i = 0; i < MAX_ITERATOR_NUMBER; i++)
-            iterators[i] = NULL;
-    }*/
 
     ~List() {
         if (beg) {
@@ -301,12 +292,7 @@ int main() {
     char* secondCommand = new char[MAX_SECOND_COMMAND_LENGHT];
     List* list = NULL;
     while (scanf("%s", command) != EOF) {
-        /*if (feof(stdin) != 0) {
-            break;
-        }*/
         if (strcmp(command, "I") == 0) {
-            //int x;
-            //cin >> x;
             list = new List;
         }
         if (strcmp(command, "i") == 0) {
